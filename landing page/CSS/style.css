@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: var(--first_color);
+    background-color: var(--third_color);
+}
+
+:root {
+    --first_color: white;
+    --second_color: black;
+    --third_color: #FAAD5D;
+    --four_color: #EF7C89;
+    --five_color: #E14AB1;
+
+    --ff_oxanium: 'Oxanium', cursive;
+}
+
+body {
+    font-family: var(--ff_oxanium);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--first_color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--third_color), var(--four_color), var(--five_color));
+}
