@@ -155,4 +155,38 @@
       preloader.remove();
     });
   }
+
+  /**
+   * project isotope and filter
+   */
+  window.addEventListener("load", () => {
+    let ProjectsContainer = select(".Projects-container");
+    if (ProjectsContainer) {
+      let ProjectsIsotope = new Isotope(ProjectsContainer, {
+        itemSelector: ".Projects-item",
+      });
+
+      let ProjectsFilters = select("#Projects-flters li", true);
+
+      on(
+        "click",
+        "#Projects-flters li",
+        function (e) {
+          e.preventDefault();
+          ProjectsFilters.forEach(function (el) {
+            el.classList.remove("filter-active");
+          });
+          this.classList.add("filter-active");
+
+          ProjectsIsotope.arrange({
+            filter: this.getAttribute("data-filter"),
+          });
+          ProjectsIsotope.on("arrangeComplete", function () {
+            AOS.refresh();
+          });
+        },
+        true
+      );
+    }
+  });
 })();
