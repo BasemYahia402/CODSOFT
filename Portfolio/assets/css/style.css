@@ -248,3 +248,65 @@ a:hover {
         line-height: 36px;
     }
 }
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about {
+    padding: 7em 0;
+    position: relative;
+}
+
+.about .img-about {
+    width: 100%;
+    z-index: 0;
+    position: relative;
+}
+
+
+.about .img-about img {
+    width: 70%;
+}
+
+.about ul.about-info {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.about ul.about-info li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.about ul.about-info li span {
+    width: calc(100% - 130px);
+}
+
+.about ul.about-info li span:first-child {
+    font-weight: 600;
+    color: var(--white);
+    width: 130px;
+}
+
+.about .counter-wrap .text p {
+    font-size: 20px;
+}
+
+.about .counter-wrap .text p span {
+    font-weight: 400;
+    color: var(--white);
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 30px;
+    color: var(--black);
+    background-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary) !important;
+    color: var(--primary);
+}
