@@ -510,6 +510,71 @@ h2 {
 }
 
 /*--------------------------------------------------------------
+# Projects Details
+--------------------------------------------------------------*/
+.Projects-details {
+    padding-top: 40px;
+}
+
+.Projects-details .Projects-details-slider img {
+    width: 100%;
+}
+
+.Projects-details .Projects-details-slider .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+}
+
+.Projects-details .Projects-details-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--white);
+    opacity: 1;
+    border: none;
+}
+
+.Projects-details .Projects-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--primary);
+}
+
+.Projects-details .Projects-info {
+    padding: 30px;
+    background-color: var(--secondary);
+}
+
+.Projects-details .Projects-info h3, .Projects-details .Projects-description h2 {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--white);
+}
+
+.Projects-details .Projects-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+}
+
+.Projects-details .Projects-info ul li+li {
+    margin-top: 10px;
+}
+
+.Projects-details .Projects-info ul li strong {
+    color: var(--white);
+}
+
+.Projects-details .Projects-description {
+    padding: 30px;
+    background-color: var(--secondary);
+}
+
+.Projects-details .Projects-description p {
+    padding: 0;
+}
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .info {
