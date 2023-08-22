@@ -178,6 +178,39 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-title {
+    padding-bottom: 40px;
+    position: relative;
+}
+
+h1.big {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    font-size: 7vw;
+    color: var(--secondary);
+    z-index: -1;
+    font-weight: 900;
+}
+
+h1.big.big-2 {
+    right: 0;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
