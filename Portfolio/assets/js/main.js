@@ -196,4 +196,256 @@
   const ProjectsLightbox = GLightbox({
     selector: ".Projects-lightbox",
   });
+
+  /**
+   * Projects details
+   */
+
+  const projectsData = [
+    {
+      id: "1",
+      category: "Web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/template_onix/",
+      description:
+        "The Onix landing website serves as an introduction to the company's services, highlighting their expertise and offerings.",
+      images: [
+        "assets/img/onix-min.png",
+        "assets/img/onix2-min.png",
+        "assets/img/onix3-min.png",
+      ],
+    },
+    {
+      id: "2",
+      category: "Web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/TEBA-LAB/",
+      description:
+        "Teba Lab is a medical center that provides a variety of important medical services,including blood analysis and measure cholesterol levels.",
+      images: [
+        "assets/img/teba-min.png",
+        "assets/img/teba2-min.png",
+        "assets/img/teba3-min.png",
+      ],
+    },
+    {
+      id: "3",
+      category: "Web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/E-Commerce/",
+      description:
+        "Online platform for businesses to sell products/services, customers can select items through the internet.",
+      images: [
+        "assets/img/e-commerce-min.png",
+        "assets/img/e-commerce2-min.png",
+        "assets/img/e-commerce3-min.png",
+      ],
+    },
+    {
+      id: "4",
+      category: "Web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/hospital_system/",
+      description:
+        "Hospital system landing website serves as an entry point, introducing the hospital's services, facilities, and expertise.",
+      images: [
+        "assets/img/hospital-min.png",
+        "assets/img/hospital2-min.png",
+        "assets/img/hospital3-min.png",
+      ],
+    },
+    {
+      id: "5",
+      category: "Web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/patient_dashbord/",
+      description:
+        "Health records, appointments, communication, and resources, empowering patients for better healthcare management.",
+      images: [
+        "assets/img/dash-min.png",
+        "assets/img/dash2-min.png",
+        "assets/img/dash3-min.png",
+      ],
+    },
+    {
+      id: "6",
+      category: "Web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/template2/",
+      description:
+        "A website template is a pre-designed layout or structure for a website that can be customized and used to create a fully functional site.",
+      images: [
+        "assets/img/template1-min.png",
+        "assets/img/template1-2-min.png",
+        "assets/img/template1-3-min.png",
+      ],
+    },
+    {
+      id: "7",
+      category: "Web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/template-1/",
+      description:
+        "A website template is a pre-designed layout or structure for a website that can be customized and used to create a fully functional site.",
+      images: [
+        "assets/img/template2-min.png",
+        "assets/img/template2-2-min.png",
+        "assets/img/template2-3-min.png",
+      ],
+    },
+    {
+      id: "8",
+      category: "App",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/ToDo-List/",
+      description:
+        "To Do is a software application designed to help individuals or teams organize and manage their tasks, activities, and responsibilities. ",
+      images: [
+        "assets/img/todo-min.png",
+        "assets/img/todo2-min.png",
+        "assets/img/todo3-min.png",
+      ],
+    },
+    {
+      id: "9",
+      category: "App",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/Calculator/",
+      description:
+        "This project is a simple calculator application that allows users to perform basic arithmetic operations and provides a user-friendlyinterface for performing addition, subtraction, multiplication, and division operations.",
+      images: [
+        "assets/img/calculator_app-min.png",
+        "assets/img/calculator_app2-min.png",
+        "assets/img/calculator_app3-min.png",
+      ],
+    },
+    {
+      id: "10",
+      category: "App",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/Quiz-App/",
+      description:
+        "quiz app is a software application designed to present users with a series of questions to test their knowledge,skills, or expertise on a particular subject or topic.",
+      images: [
+        "assets/img/quiz-min.png",
+        "assets/img/quiz2-min.png",
+        "assets/img/quiz3-min.png",
+      ],
+    },
+    {
+      id: "11",
+      category: "web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/rating/",
+      description:
+        "Online platform for users to rate products/services with reviews, aiding informed decision-making for consumers.",
+      images: [
+        "assets/img/rating-min.png",
+        "assets/img/rating2-min.png",
+        "assets/img/rating3-min.png",
+      ],
+    },
+    {
+      id: "12",
+      category: "web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/Memes-Generator/",
+      description:
+        "Meme Generator is a fun React web application that allows users to create custom memes by combining images and adding their own text captions. The application provides an intuitive user interface where users can select images from a library, add text, and creative memes.",
+      images: [
+        "assets/img/meme_generator-min.png",
+        "assets/img/meme_generator2-min.png",
+        "assets/img/meme_generator3-min.png",
+      ],
+    },
+    {
+      id: "13",
+      category: "web",
+      date: "2023-08-19",
+      url: "https://basemyahia402.github.io/Memes-Generator/",
+      description:
+        "Process to regain access after forgetting login credentials on an online platform.",
+      images: [
+        "assets/img/forget-min.png",
+        "assets/img/forget2-min.png",
+        "assets/img/forget3-min.png",
+      ],
+    },
+  ];
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const projectDetailsContainer = select("#Projects-details");
+    if (projectDetailsContainer) {
+      const queryParams = new URLSearchParams(window.location.search);
+
+      const projectId = queryParams.get("project");
+      const selectedProject = projectsData.find(
+        (project) => project.id === projectId
+      );
+
+      if (selectedProject) {
+        const projectDetailsHTML = `
+               <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-8">
+              <div class="Projects-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide">
+                    <img src="${selectedProject.images[0]}" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="${selectedProject.images[1]}" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="${selectedProject.images[2]}" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="Projects-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong>Category</strong>: ${selectedProject.category}</li>
+                  <li><strong>Project date</strong>:${selectedProject.date}</li>
+                  <li>
+                    <strong>Project URL</strong>:
+                    <a href="${selectedProject.url}" target="_blank">www.website.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="Projects-description">
+                <h2>Project Description</h2>
+                <p>
+               ${selectedProject.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    `;
+
+        projectDetailsContainer.innerHTML = projectDetailsHTML;
+      } else {
+        projectDetailsContainer.innerHTML = "<p>Project details not found.</p>";
+      }
+    }
+    new Swiper(".Projects-details-slider", {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+      },
+    });
+  });
 })();
