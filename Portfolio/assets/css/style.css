@@ -343,3 +343,45 @@ h2 {
     background-color: var(--secondary) !important;
     color: var(--primary);
 }
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.Skills .icon-box {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    transition: all ease-in-out 0.3s;
+    background: var(--secondary);
+}
+
+.Skills .icon-box .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: var(--primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.Skills .icon-box .icon i {
+    color: var(--secondary);
+    font-size: 28px;
+    transition: ease-in-out 0.3s;
+}
+
+.Skills .icon-box h4 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.Skills .icon-box:hover {
+    transform: translateY(-10px);
+}
