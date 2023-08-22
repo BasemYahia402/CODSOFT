@@ -189,4 +189,11 @@
       );
     }
   });
+
+  /**
+   * Initiate Projects lightbox
+   */
+  const ProjectsLightbox = GLightbox({
+    selector: ".Projects-lightbox",
+  });
 })();
