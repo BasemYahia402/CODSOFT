@@ -56,4 +56,18 @@
   };
   window.addEventListener("load", navbarlinksActive);
   onscroll(document, navbarlinksActive);
+
+  /**
+   * Scrolls to an element with header offset
+   */
+  const scrollto = (el) => {
+    let header = select("#header");
+    let offset = header.offsetHeight;
+
+    let elementPos = select(el).offsetTop;
+    window.scrollTo({
+      top: elementPos - offset,
+      behavior: "smooth",
+    });
+  };
 })();
