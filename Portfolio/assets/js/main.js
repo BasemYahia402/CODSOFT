@@ -70,4 +70,20 @@
       behavior: "smooth",
     });
   };
+
+  /**
+   * change background-color to #header when page is scrolled
+   */
+  let selectHeader = select("#header");
+  if (selectHeader) {
+    const headerScrolled = () => {
+      if (window.scrollY > 500) {
+        selectHeader.style = "  background-color: var(--black);";
+      } else {
+        selectHeader.style = "  background-color: transparent;";
+      }
+    };
+    window.addEventListener("load", headerScrolled);
+    onscroll(document, headerScrolled);
+  }
 })();
