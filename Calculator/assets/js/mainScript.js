@@ -169,11 +169,138 @@ function Standard() {
   const section_history = document.getElementById("history");
   section_history.style.display = "block";
   sidebar.classList.remove("show");
-  const isSmallScreen = window.innerWidth <= 767; 
+  const isSmallScreen = window.innerWidth <= 767;
 
   if (isSmallScreen) {
     calculator.style.width = "100%";
   } else {
     calculator.style.width = "75%";
   }
+}
+
+function appendToResult(value) {
+  let resultElement = document.getElementById("result");
+  let currentResult = resultElement.innerHTML;
+
+  if (currentResult === "0") {
+    resultElement.innerHTML = value;
+  } else {
+    resultElement.innerHTML = currentResult + value;
+  }
+}
+
+function deleteLastDigit() {
+  let resultElement = document.getElementById("result");
+  let currentResult = resultElement.innerHTML;
+  if (currentResult !== "0" && currentResult !== "Error") {
+    currentResult = currentResult.slice(0, -1);
+    if (currentResult === "") {
+      currentResult = "0";
+    }
+    resultElement.innerHTML = currentResult;
+  }
+}
+
+function calculateResult() {
+  let resultElement = document.getElementById("result");
+  let currentResult = resultElement.innerHTML;
+  let result = "Error";
+  try {
+    result = eval(currentResult);
+    hist.push(currentResult + "=" + result);
+    localStorage.setItem("history", JSON.stringify(hist));
+    displayHistory();
+  } catch (error) {
+    resultElement.innerHTML = "Error";
+  }
+  resultElement.innerHTML = result;
+  currentResult = result;
+  addValueToResult();
+}
+
+function calculateSquareRoot() {
+  let resultElement = document.getElementById("result");
+  let currentResult = resultElement.innerHTML;
+
+  if (currentResult >= 0) {
+    let squareRootValue = Math.sqrt(currentResult);
+    squareRootValue = squareRootValue.toFixed(5);
+    resultElement.textContent = squareRootValue;
+  } else {
+    resultElement.textContent = "Error";
+  }
+}
+
+function calculatePower() {
+  let resultElement = document.getElementById("result");
+  let currentResult = resultElement.innerHTML;
+
+  if (currentResult >= 0) {
+    const powertValue = Math.pow(currentResult, 2);
+    resultElement.textContent = powertValue;
+  } else {
+    resultElement.textContent = "Error";
+  }
+}
+
+function calculateUpturned() {
+  let resultElement = document.getElementById("result");
+  let currentResult = resultElement.innerHTML;
+
+  if (currentResult >= 0) {
+    const UpturnedValue = 1 / currentResult;
+    resultElement.textContent = UpturnedValue;
+  } else {
+    resultElement.textContent = "Error";
+  }
+}
+
+function clearResult() {
+  let amountELement = document.getElementById("amount");
+  let resultElement = document.getElementById("result");
+  if (amountELement) {
+    amountELement.value = "0";
+  }
+  resultElement.innerHTML = "0";
+}
+
+function clearHistory() {
+  hist = [];
+  displayHistory();
+}
+
+function deleteALLOperation() {
+  hist.length = 0;
+  localStorage.removeItem("history");
+  displayHistory();
+}
+
+function displayHistory() {
+  let historyList = document.getElementById("history-list");
+  historyList.innerHTML = "";
+  for (let i = 0; i < hist.length; i++) {
+    let listItem = document.createElement("li");
+    listItem.innerText = hist[i];
+    historyList.appendChild(listItem);
+  }
+}
+
+displayHistory();
+
+function addValueToResult() {
+  const myList = document.getElementById("history-list");
+  const result = document.getElementById("result");
+  const listItems = myList.querySelectorAll("li");
+
+  listItems.forEach((item) => {
+    item.onclick = function () {
+      const equalIndex = item.textContent.indexOf("=");
+
+      if (equalIndex !== -1) {
+        const numberPart = item.textContent.substring(equalIndex + 1).trim();
+        const numericValue = parseFloat(numberPart);
+        result.innerHTML = numericValue;
+      }
+    };
+  });
 }
