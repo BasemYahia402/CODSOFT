@@ -155,3 +155,122 @@ button {
 #sidebar.show {
     left: 0;
 }
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+}
+
+.left-side {
+    width: 75%;
+    padding-right: 10px;
+    height: auto;
+}
+
+.right-side {
+    width: 25%;
+    height: auto;
+}
+
+@media (max-width:767px) {
+    .left-side, .right-side {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .right-side {
+        margin-top: 10px;
+    }
+}
+
+input {
+    color: white;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3B3B3B;
+    color: white;
+}
+
+.base, .convert {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+#result {
+    width: 19rem;
+    height: 11.5rem;
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    #result {
+        height: 8rem;
+    }
+}
+
+.btns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 64px);
+    gap: 3px;
+}
+
+.btns button {
+    width: inherit;
+    height: 64px;
+    background-color: #3B3B3B;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.btns button:not(:last-child):hover {
+    background-color: #323232;
+}
+
+.btns button img {
+    margin: 0 auto;
+}
+
+.btns .equal {
+    background-color: #7CD6F5;
+    color: #323232;
+}
+
+.history {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.history #history-list li {
+    width: 100%;
+    height: 5rem;
+    padding-left: 5px;
+    line-height: 5rem;
+    cursor: pointer;
+}
+
+.history #history-list li:hover {
+    background-color: #3B3B3B;
+}
+
+.history .button {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.history .button img {
+    width: 2rem;
+}
