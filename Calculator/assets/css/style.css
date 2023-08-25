@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700&display=swap");
 
+:root {
+    --font-primary: "Oxanium", cursive;
+
+    --white: #fff;
+    --darken: #202020;
+
+    --primary: #3B3B3B;
+    --secondary: #7CD6F5;
+    --third: #2E2E2E;
+}
+
 html {
     height: 100%;
     font-size: 10px;
@@ -8,9 +19,9 @@ html {
 
 body {
     height: 100%;
-    background-color: #202020;
-    color: white;
-    font-family: "Oxanium", cursive;
+    background-color: var(--darken);
+    color: var(--white);
+    font-family: var(--font-primary);
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.6;
@@ -29,11 +40,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: var(--white);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--primary);
 }
 
 *, *::before, *::after {
@@ -110,7 +121,7 @@ button {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #2E2E2E;
+    background-color: var(--third);
     transition: left 0.3s ease-in-out;
     border-radius: 5px;
     padding: 15px 10px;
@@ -123,7 +134,7 @@ button {
 }
 
 #sidebar button p {
-    color: white;
+    color: var(--white);
 }
 
 #sidebar #sidebar-cancel {
@@ -145,11 +156,11 @@ button {
     width: 100%;
     margin: 0;
     padding: 10px 5px;
-    color: white;
+    color: var(--white);
 }
 
 #sidebar .modes button p:hover {
-    background-color: #3B3B3B;
+    background-color: var(--primary);
 }
 
 #sidebar.show {
@@ -186,7 +197,7 @@ button {
 }
 
 input {
-    color: white;
+    color: var(--white);
 }
 
 select {
@@ -194,8 +205,8 @@ select {
     font-size: 16px;
     border: none;
     border-radius: 4px;
-    background-color: #3B3B3B;
-    color: white;
+    background-color: var(--primary);
+    color: var(--white);
 }
 
 .base, .convert {
@@ -229,12 +240,12 @@ select {
 .btns button {
     width: inherit;
     height: 64px;
-    background-color: #3B3B3B;
-    color: white;
+    background-color: var(--primary);
+    color: var(--white);
     border-radius: 0.5rem;
 }
 
-.btns button:not(:last-child):hover {
+.btns button:hover {
     background-color: #323232;
 }
 
@@ -243,8 +254,12 @@ select {
 }
 
 .btns .equal {
-    background-color: #7CD6F5;
-    color: #323232;
+    background-color: var(--secondary);
+    color: var(--third);
+}
+
+.btns .equal:hover {
+    background-color: var(--secondary);
 }
 
 .history {
@@ -262,7 +277,7 @@ select {
 }
 
 .history #history-list li:hover {
-    background-color: #3B3B3B;
+    background-color: var(--primary);
 }
 
 .history .button {
